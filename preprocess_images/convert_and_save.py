@@ -6,7 +6,7 @@ from google.colab import drive
 drive.mount("/content/gdrive")
 
 saveto_path = "/content/gdrive/My Drive/filename_of_original_images/"
-image_path = "/content/gdrive/My Drive/filename_where_padded_images_have_to_be_saved/
+image_path = "/content/gdrive/My Drive/filename_where_padded_images_have_to_be_saved/"
 
 def avg(lst):
     return sum(lst) // len(lst)
