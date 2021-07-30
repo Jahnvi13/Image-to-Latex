@@ -1,4 +1,9 @@
 import os
+from PIL import Image
+
+#Mount your gdrive if the activity is being done on colab
+from google.colab import drive
+drive.mount("/content/gdrive")
 
 saveto_path = "/content/gdrive/My Drive/filename_of_original_images/"
 image_path = "/content/gdrive/My Drive/filename_where_padded_images_have_to_be_saved/
@@ -17,7 +22,9 @@ ct=0
 #iterate over the filenames in the given directory
 for filename in os.listdir(image_path):
   
-  #following code snippet is just for convinience
+  #following lines are just for convenience. 
+  #Check in the target folder if the images have been
+  #saved just as you liked and then comment the below 4 lines
   ct+=1
   if(ct==6):
     break
@@ -64,4 +71,4 @@ for filename in os.listdir(image_path):
   res = add_margin(imgres, (300-nh)//2, bo)
   
   #save file
-  res.save(saveto_path+filename[:len(filename)-4]+".jpeg")
+  res.save(saveto_path+filename[:len(filename)-4]+".jpeg", format="jpeg")
