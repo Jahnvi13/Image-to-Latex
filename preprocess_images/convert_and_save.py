@@ -52,16 +52,16 @@ for filename in os.listdir(image_path):
   for i in range(0, 5):
     for j in range(0, 5):
       r, g, b = rgb_im.getpixel((i, j))
-      rc.append(r);
-      gc.append(g);
-      bc.append(b);
+      rc.append(r)
+      gc.append(g)
+      bc.append(b)
 
   for i in range(nw-5, nw):
     for j in range(0, 5):
       r, g, b = rgb_im.getpixel((i, j))
-      rc.append(r);
-      gc.append(g);
-      bc.append(b);
+      rc.append(r)
+      gc.append(g)
+      bc.append(b)
       
   tup = (avg(rc), avg(gc), avg(bc))
   
